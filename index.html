@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Complete Catalog of Japan's Data Protection & AI Governance Framework | VeraSafe</title>
+<style>
+@page {
+  size: A4;
+  margin: 1.8cm 2.2cm;
+  @bottom-center {
+    content: counter(page);
+    font-family: 'Helvetica Neue', 'Noto Sans KR', 'Noto Sans JP', Arial, sans-serif;
+    font-size: 9px;
+    color: #c0c0c0;
+  }
+}
+
+@page :first {
+  margin: 0;
+  @bottom-center { content: none; }
+}
+
+@page :nth(2) {
+  @bottom-center { content: none; }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', 'Noto Sans KR', 'Noto Sans JP', Arial, sans-serif;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #444444;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ── COVER ── */
+.cover {
+  background: #000000;
+  width: 100%;
+  height: 297mm;
+  padding: 0 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 100px;
+  page-break-after: always;
+  position: relative;
+}
+.cover-logo {
+  position: absolute;
+  top: 52px;
+  right: 52px;
+  width: 130px;
+  opacity: 0.9;
+}
+.cover h1 {
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+.cover .subtitle {
+  color: #c0c0c0;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+/* ── TOC ── */
+.toc {
+  page-break-after: always;
+  padding-top: 12px;
+}
+.toc-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #2d6a4f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.toc-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 10px;
+}
+.toc-bar {
+  width: 32px;
+  height: 2px;
+  background: #2d6a4f;
+  margin-bottom: 28px;
+}
+.toc-section {
+  margin-bottom: 18px;
+}
+.toc-section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #222222;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #d8d8d8;
+}
+.toc-item {
+  display: flex;
+  align-items: baseline;
+  padding: 2.5px 0;
+  font-size: 12px;
+  color: #444444;
+  line-height: 1.5;
+}
+.toc-item .num {
+  font-weight: 600;
+  color: #222222;
+  min-width: 24px;
+  font-size: 11px;
+}
+.toc-item .name {
+  flex: 1;
+}
+.toc-item a {
+  color: #444444;
+  text-decoration: none;
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+}
+.toc-item a .num {
+  min-width: 24px;
+  margin-right: 8px;
+}
+.toc-item a:hover {
+  color: #2d6a4f;
+}
+
+/* ── EXEC SUMMARY ── */
+.exec-summary {
+  border-top: 2px solid #222222;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 18px 0;
+  margin-bottom: 40px;
+}
+.exec-summary-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2d6a4f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.exec-summary-item {
+  font-size: 12.5px;
+  color: #444444;
+  line-height: 1.65;
+  margin-bottom: 5px;
+  padding-left: 14px;
+  position: relative;
+}
+.exec-summary-item::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+}
+
+/* ── CHAPTER ── */
+.chapter {
+  margin-top: 36px;
+}
+.chapter-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2d6a4f;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.chapter-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 8px;
+}
+.chapter-bar {
+  width: 28px;
+  height: 2px;
+  background: #2d6a4f;
+  margin-bottom: 24px;
+}
+
+/* ── GUIDELINE ENTRY (DENSE) ── */
+.entry {
+  margin-bottom: 20px;
+}
+.entry-num {
+  font-size: 10px;
+  font-weight: 600;
+  color: #2d6a4f;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.entry-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 3px;
+  line-height: 1.35;
+}
+.entry-title-kr {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #999999;
+  margin-bottom: 8px;
+}
+.entry-link {
+  font-size: 10px;
+  color: #2d6a4f;
+  margin-bottom: 8px;
+  word-break: break-all;
+}
+.entry-link a {
+  color: #2d6a4f;
+  text-decoration: none;
+}
+.entry-desc {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: #444444;
+  margin-bottom: 8px;
+  max-width: 640px;
+}
+.entry-meta {
+  font-size: 11px;
+  color: #777777;
+  margin-bottom: 6px;
+}
+.entry-meta span {
+  margin-right: 16px;
+}
+.entry-impl {
+  border-left: 2px solid #2d6a4f;
+  padding-left: 16px;
+  margin-top: 6px;
+}
+.entry-impl-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: #2d6a4f;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.entry-impl-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #444444;
+  max-width: 600px;
+}
+.entry-sep {
+  height: 1px;
+  background: #d8d8d8;
+  margin-top: 20px;
+}
+
+/* ── HIERARCHY ── */
+.hierarchy {
+  margin-top: 24px;
+  margin-bottom: 32px;
+}
+.h-root {
+  font-size: 14px;
+  font-weight: 700;
+  color: #222222;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background: #f8f8f8;
+  border-left: 3px solid #2d6a4f;
+}
+.h-root .h-root-sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: #777777;
+  margin-left: 8px;
+}
+.h-tier1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 12px;
+}
+.h-block {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid #e0e0e0;
+  border-top: 2px solid #2d6a4f;
+  padding: 14px 16px;
+  background: #ffffff;
+}
+.h-block-title {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2d6a4f;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.h-block-item {
+  font-size: 11.5px;
+  color: #444444;
+  line-height: 1.55;
+  padding: 2px 0;
+}
+.h-block-item .h-code {
+  font-weight: 600;
+  color: #222222;
+  display: inline-block;
+  min-width: 38px;
+}
+.h-block-item .h-star {
+  color: #2d6a4f;
+  font-weight: 700;
+}
+.h-subordinate {
+  margin-top: 6px;
+  padding-top: 8px;
+  border-top: 1px solid #eeeeee;
+}
+.h-subordinate-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #999999;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════ COVER ═══════════════ -->
+<div class="cover">
+  <img class="cover-logo" src="verasafe-logo-transparent.png" alt="VeraSafe">
+  <div class="subtitle">PPC · Cabinet Office · METI · MIC · Digital Agency · Sector Ministries</div>
+  <h1>Complete Catalog of<br>Japan's Data Protection &amp;<br>AI Governance Framework</h1>
+  <div class="subtitle">50+ Official Laws, Guidelines &amp; Policy Documents across Privacy (APPI) and Artificial Intelligence</div>
+  <div class="subtitle" style="margin-top: 24px; font-size: 13px; color: #999999;">As of March 26, 2026</div>
+</div>
+
+<!-- ═══════════════ TOC ═══════════════ -->
+<div class="toc">
+  <div class="toc-label">Contents</div>
+  <div class="toc-title">Table of Contents</div>
+  <div class="toc-bar"></div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">I &mdash; Laws (法令)</div>
+    <div class="toc-item"><a href="#L01"><span class="num">01</span><span class="name">Act on the Protection of Personal Information (APPI)</span></a></div>
+    <div class="toc-item"><a href="#L02"><span class="num">02</span><span class="name">APPI Enforcement Order</span></a></div>
+    <div class="toc-item"><a href="#L03"><span class="num">03</span><span class="name">APPI Enforcement Rules</span></a></div>
+    <div class="toc-item"><a href="#L04"><span class="num">04</span><span class="name">Act on the Use of Numbers to Identify a Specific Individual (My Number Act)</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">II &mdash; Core Guidelines (ガイドライン)</div>
+    <div class="toc-item"><a href="#GL01"><span class="num">05</span><span class="name">Guidelines — General Rules (通則編)</span></a></div>
+    <div class="toc-item"><a href="#GL02"><span class="num">06</span><span class="name">Guidelines — Cross-Border Transfer (外国第三者提供編)</span></a></div>
+    <div class="toc-item"><a href="#GL03"><span class="num">07</span><span class="name">Guidelines — Third-Party Provision Records (確認・記録義務編)</span></a></div>
+    <div class="toc-item"><a href="#GL04"><span class="num">08</span><span class="name">Guidelines — Pseudonymized/Anonymized Information (仮名・匿名加工情報編)</span></a></div>
+    <div class="toc-item"><a href="#GL05"><span class="num">09</span><span class="name">Guidelines — Accredited Personal Information Protection Organizations (認定団体編)</span></a></div>
+    <div class="toc-item"><a href="#GL06"><span class="num">10</span><span class="name">Guidelines — Administrative Organs (行政機関等編)</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">III &mdash; Q&amp;A Documents</div>
+    <div class="toc-item"><a href="#QA01"><span class="num">11</span><span class="name">Guidelines Q&amp;A (Private Sector, 400+ Items)</span></a></div>
+    <div class="toc-item"><a href="#QA02"><span class="num">12</span><span class="name">Q&amp;A for Administrative Organs</span></a></div>
+    <div class="toc-item"><a href="#QA03"><span class="num">13</span><span class="name">Q&amp;A for Financial Institutions</span></a></div>
+    <div class="toc-item"><a href="#QA04"><span class="num">14</span><span class="name">Q&amp;A for Medical and Long-Term Care</span></a></div>
+    <div class="toc-item"><a href="#QA05"><span class="num">15</span><span class="name">Q&amp;A for Health Insurance Associations</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">IV &mdash; Financial Sector (金融関連)</div>
+    <div class="toc-item"><a href="#F01"><span class="num">16</span><span class="name">Financial Sector Privacy Guidelines</span></a></div>
+    <div class="toc-item"><a href="#F02"><span class="num">17</span><span class="name">Financial Sector Safety Measures Implementation Guide</span></a></div>
+    <div class="toc-item"><a href="#F03"><span class="num">18</span><span class="name">Credit Sector Privacy Guidelines</span></a></div>
+    <div class="toc-item"><a href="#F04"><span class="num">19</span><span class="name">Debt Collection Sector Privacy Guidelines</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">V &mdash; Medical &amp; Long-Term Care (医療関連)</div>
+    <div class="toc-item"><a href="#M01"><span class="num">20</span><span class="name">Medical and Long-Term Care Providers Guidance</span></a></div>
+    <div class="toc-item"><a href="#M02"><span class="num">21</span><span class="name">Health Insurance Associations Guidance</span></a></div>
+    <div class="toc-item"><a href="#M03"><span class="num">22</span><span class="name">National Health Insurance Associations Guidance</span></a></div>
+    <div class="toc-item"><a href="#M04"><span class="num">23</span><span class="name">National Health Insurance Federation Guidance</span></a></div>
+    <div class="toc-item"><a href="#M05"><span class="num">24</span><span class="name">Genetic Information Business Guidelines</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">VI &mdash; Telecommunications (情報通信関連)</div>
+    <div class="toc-item"><a href="#T01"><span class="num">25</span><span class="name">Telecommunications Business Privacy Guidelines</span></a></div>
+    <div class="toc-item"><a href="#T02"><span class="num">26</span><span class="name">Broadcasting Recipients Privacy Guidelines</span></a></div>
+    <div class="toc-item"><a href="#T03"><span class="num">27</span><span class="name">Postal Service Privacy Guidelines</span></a></div>
+    <div class="toc-item"><a href="#T04"><span class="num">28</span><span class="name">Letter Delivery Service Privacy Guidelines</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">VII &mdash; My Number (マイナンバー)</div>
+    <div class="toc-item"><a href="#MN01"><span class="num">29</span><span class="name">Specific Personal Information Guidelines — Business Operators</span></a></div>
+    <div class="toc-item"><a href="#MN02"><span class="num">30</span><span class="name">Specific Personal Information Guidelines — Financial Annex</span></a></div>
+    <div class="toc-item"><a href="#MN03"><span class="num">31</span><span class="name">Specific Personal Information Guidelines — Administrative Organs</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">VIII &mdash; Other Privacy Documents</div>
+    <div class="toc-item"><a href="#O01"><span class="num">32</span><span class="name">Basic Policy on the Protection of Personal Information</span></a></div>
+    <div class="toc-item"><a href="#O02"><span class="num">33</span><span class="name">Employment Management — Health Information Handling Considerations</span></a></div>
+    <div class="toc-item"><a href="#O03"><span class="num">34</span><span class="name">Supplementary Rules for EU/UK Adequacy Transfers</span></a></div>
+    <div class="toc-item"><a href="#O04"><span class="num">35</span><span class="name">Facial Recognition Camera System Report</span></a></div>
+    <div class="toc-item"><a href="#O05"><span class="num">36</span><span class="name">Administrative Organs — Operational Response Guide</span></a></div>
+  </div>
+
+  <div style="height: 1px; background: #222222; margin: 16px 0;"></div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">IX &mdash; AI Law &amp; National Strategy (AI法令・国家戦略)</div>
+    <div class="toc-item"><a href="#AI01"><span class="num">37</span><span class="name">Act on Promotion of AI-Related Technologies (AI推進法)</span></a></div>
+    <div class="toc-item"><a href="#AI02"><span class="num">38</span><span class="name">AI Basic Plan (人工知能基本計画)</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">X &mdash; Cross-Ministerial AI Guidelines (省庁横断)</div>
+    <div class="toc-item"><a href="#AI03"><span class="num">39</span><span class="name">AI Business Operator Guidelines v1.1 (AI事業者ガイドライン)</span></a></div>
+    <div class="toc-item"><a href="#AI04"><span class="num">40</span><span class="name">PPC Alert on Generative AI Services</span></a></div>
+    <div class="toc-item"><a href="#AI05"><span class="num">41</span><span class="name">AI Contract Checklist (AI契約チェックリスト)</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">XI &mdash; Digital Agency AI Guidelines (デジタル庁)</div>
+    <div class="toc-item"><a href="#AI06"><span class="num">42</span><span class="name">Generative AI Procurement &amp; Utilization Guideline (DS-920)</span></a></div>
+    <div class="toc-item"><a href="#AI07"><span class="num">43</span><span class="name">Text-Generating AI Risk Countermeasure Guidebook</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">XII &mdash; International (国際)</div>
+    <div class="toc-item"><a href="#AI08"><span class="num">44</span><span class="name">Hiroshima AI Process — International Code of Conduct</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">XIII &mdash; Sector-Specific AI Governance (業種別)</div>
+    <div class="toc-item"><a href="#AI10"><span class="num">45</span><span class="name">FSA AI Discussion Paper (金融庁)</span></a></div>
+    <div class="toc-item"><a href="#AI11"><span class="num">46</span><span class="name">Medical Digital Data AI R&amp;D Guidelines (厚労省)</span></a></div>
+    <div class="toc-item"><a href="#AI12"><span class="num">47</span><span class="name">Generative AI in Education Guidelines v2.0 (文科省)</span></a></div>
+    <div class="toc-item"><a href="#AI13"><span class="num">48</span><span class="name">MOD AI Utilization Basic Policy (防衛省)</span></a></div>
+    <div class="toc-item"><a href="#AI14"><span class="num">49</span><span class="name">Responsible AI Application Guidelines for Defense R&amp;D (防衛装備庁)</span></a></div>
+    <div class="toc-item"><a href="#AI15"><span class="num">50</span><span class="name">Local Government AI Utilization Guidebook (総務省)</span></a></div>
+  </div>
+
+  <div class="toc-section">
+    <div class="toc-section-title">XIV &mdash; AI &amp; Intellectual Property (知的財産)</div>
+    <div class="toc-item"><a href="#AI16"><span class="num">51</span><span class="name">AI and Copyright — Perspectives &amp; Checklist (文化庁)</span></a></div>
+  </div>
+</div>
+
+<!-- ═══════════════ EXEC SUMMARY ═══════════════ -->
+<div class="exec-summary">
+  <div class="exec-summary-label">Executive Summary</div>
+  <div class="exec-summary-item"><strong>Part A — Data Protection:</strong> Japan's privacy framework comprises 4 primary statutes, 6 core PPC guidelines, 5 Q&amp;A documents, 13 sector-specific guidelines (finance, medical, telecom), 3 My Number guidelines, and 5 supplementary documents — 36 documents governed by the Personal Information Protection Commission (PPC).</div>
+  <div class="exec-summary-item"><strong>Part B — AI Governance:</strong> Japan enacted its first AI law (AI推進法, Act No. 53/2025) effective September 2025, establishing an AI Strategy Headquarters under the Prime Minister. The cross-ministerial AI Business Operator Guidelines v1.1 (METI+MIC, March 2025) and the Digital Agency's generative AI procurement guideline (DS-920) form the operational backbone, complemented by 6 sector-specific AI guidelines.</div>
+  <div class="exec-summary-item">The APPI was comprehensively amended in 2022 to unify private and public sector rules. Japan holds EU/UK adequacy decisions. The AI framework follows an innovation-first, soft-law approach — no penalties in the AI Promotion Act itself — with sector regulators issuing binding guidance where needed.</div>
+  <div class="exec-summary-item">The Hiroshima AI Process (G7, 2023) represents Japan's leadership in international AI governance, with 59 participating countries and a reporting framework operational since February 2025.</div>
+  <div class="exec-summary-item">This catalog covers 51 official documents across both domains, enabling international organizations to navigate Japan's complete data protection and AI governance landscape in a single reference.</div>
+</div>
+
+<!-- ═══════════════ CHAPTER I: LAWS ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 01</div>
+  <div class="chapter-title">Laws (法令)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="L01">01</div>
+    <div class="entry-title">Act on the Protection of Personal Information (APPI)</div>
+    <div class="entry-title-kr">個人情報の保護に関する法律 · 개인정보보호법</div>
+    <div class="entry-meta"><span>平成15年法律第57号</span><span>250 articles</span><span>259KB markdown</span></div>
+    <div class="entry-link"><a href="https://elaws.e-gov.go.jp/document?lawid=415AC0000000057" target="_blank" rel="noopener noreferrer">elaws.e-gov.go.jp — lawid=415AC0000000057</a></div>
+    <div class="entry-desc">Japan's comprehensive data protection law governing the handling of personal information by both private business operators and administrative organs. Enacted in 2003 and substantially amended in 2015, 2020, and 2022 to address evolving data processing needs, cross-border transfers, and public sector integration.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The foundational statute for all privacy compliance in Japan. The 2022 amendment unified private and public sector rules under one act, eliminating the need to consult separate public sector laws. Defines core concepts: personal information, personal-related information (個人関連情報), individual identification codes, and special care-required personal information.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="L02">02</div>
+    <div class="entry-title">APPI Enforcement Order</div>
+    <div class="entry-title-kr">個人情報の保護に関する法律施行令 · 개인정보보호법 시행령</div>
+    <div class="entry-meta"><span>平成15年政令第507号</span><span>40 articles</span><span>64KB markdown</span></div>
+    <div class="entry-link"><a href="https://elaws.e-gov.go.jp/document?lawid=415CO0000000507" target="_blank" rel="noopener noreferrer">elaws.e-gov.go.jp — lawid=415CO0000000507</a></div>
+    <div class="entry-desc">Cabinet order providing detailed specifications for APPI provisions. Specifies individual identification codes (biometrics, passport numbers, driver's license numbers), categories of retained personal data exemptions, and details cross-border transfer requirements.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Provides the operational detail absent from the statute itself. Critical for determining whether specific data qualifies as individual identification codes, which countries are recognized as having equivalent protection, and numeric thresholds triggering enhanced obligations.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="L03">03</div>
+    <div class="entry-title">APPI Enforcement Rules</div>
+    <div class="entry-title-kr">個人情報の保護に関する法律施行規則 · 개인정보보호법 시행규칙</div>
+    <div class="entry-meta"><span>平成28年個人情報保護委員会規則第3号</span><span>70 articles</span><span>91KB markdown</span></div>
+    <div class="entry-link"><a href="https://elaws.e-gov.go.jp/document?lawid=428M60020000003" target="_blank" rel="noopener noreferrer">elaws.e-gov.go.jp — lawid=428M60020000003</a></div>
+    <div class="entry-desc">PPC rules specifying procedural requirements for consent, notification, record-keeping, breach reporting, and cross-border transfer documentation. Provides templates and formats for mandatory notifications and reports.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Contains the most granular compliance requirements. Essential for implementing breach notification procedures (including the prompt preliminary report (approximately 3–5 business days) and 30-day full report deadlines (60 days for certain third-party provision breaches)), consent records for cross-border transfers, and opt-out notification procedures.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="L04">04</div>
+    <div class="entry-title">Act on the Use of Numbers to Identify a Specific Individual (My Number Act)</div>
+    <div class="entry-title-kr">行政手続における特定の個人を識別するための番号の利用等に関する法律 · 마이넘버법</div>
+    <div class="entry-meta"><span>平成25年法律第27号</span><span>331KB markdown</span></div>
+    <div class="entry-link"><a href="https://elaws.e-gov.go.jp/document?lawid=425AC0000000027" target="_blank" rel="noopener noreferrer">elaws.e-gov.go.jp — lawid=425AC0000000027</a></div>
+    <div class="entry-desc">Governs the use of individual numbers (My Number / マイナンバー) for administrative procedures including tax, social security, and disaster response. Imposes stricter handling requirements than the APPI for specific personal information containing My Numbers.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Any employer, financial institution, or service provider handling My Numbers must comply with heightened security and use-limitation requirements. Cross-border transfer of My Number data is essentially prohibited. Penalties for misuse are significantly more severe than APPI violations.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER II: CORE GUIDELINES ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 02</div>
+  <div class="chapter-title">Core Guidelines (ガイドライン)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL01">05</div>
+    <div class="entry-title">Guidelines on the APPI — General Rules</div>
+    <div class="entry-title-kr">個人情報の保護に関する法律についてのガイドライン（通則編） · 통칙편</div>
+    <div class="entry-meta"><span>最終改正: 令和7年6月</span><span>489KB markdown · 189 pages</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/250601_guidelines01.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines01.pdf</a></div>
+    <div class="entry-desc">The most comprehensive and important guideline. Provides clause-by-clause interpretation of the APPI for private business operators, covering definitions (personal information, personal data, retained personal data), utilization purpose, acquisition, maintenance/management, third-party provision, disclosure/correction/suspension, and breach notification procedures.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The single most important compliance reference. At 189 pages, it provides authoritative interpretive guidance with practical examples for every major APPI obligation. Must be the first document consulted for any data processing question. Includes detailed guidance on the 2022 amendments including personal-related information (個人関連情報) and enhanced breach reporting to PPC with data subject notification.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL02">06</div>
+    <div class="entry-title">Guidelines on the APPI — Cross-Border Third-Party Transfers</div>
+    <div class="entry-title-kr">同（外国にある第三者への提供編） · 외국 제3자 제공편</div>
+    <div class="entry-meta"><span>最終改正: 令和7年12月</span><span>76KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/251212_guidelines02.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines02.pdf</a></div>
+    <div class="entry-desc">Detailed guidance on the requirements for transferring personal data to third parties located in foreign countries. Covers the three lawful bases: consent with information provision, transfers to countries with equivalent systems, and transfers to parties with equivalent measures via contract or group rules (APEC CBPR, etc.).</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Essential for any multinational operation. The 2022 amendment significantly enhanced information disclosure requirements for cross-border transfers, requiring business operators (個人情報取扱事業者) to provide the destination country's privacy regime details, the recipient's safeguards, and regular updates. Non-compliance exposes organizations to PPC enforcement action and reputational damage.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL03">07</div>
+    <div class="entry-title">Guidelines on the APPI — Third-Party Provision Confirmation and Record-Keeping</div>
+    <div class="entry-title-kr">同（第三者提供時の確認・記録義務編） · 제3자 제공시 확인·기록의무편</div>
+    <div class="entry-meta"><span>最終改正: 令和5年12月</span><span>70KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/240401_guidelines03.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines03.pdf</a></div>
+    <div class="entry-desc">Specifies the record-keeping obligations for both providers and recipients of personal data in third-party transfers. Details what records must be created, their content requirements, retention periods, and the methods for confirming the lawful acquisition of received data.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Creates an audit trail for personal data flows. Organizations receiving personal data from third parties must verify the data's lawful origin and maintain records — failure to do so creates compliance exposure even if the data itself was lawfully collected by the provider.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL04">08</div>
+    <div class="entry-title">Guidelines on the APPI — Pseudonymized and Anonymized Information</div>
+    <div class="entry-title-kr">同（仮名加工情報・匿名加工情報編） · 가명·익명가공정보편</div>
+    <div class="entry-meta"><span>最終改正: 令和6年12月</span><span>26KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/241202_guidelines04.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines04.pdf</a></div>
+    <div class="entry-desc">Guidance on the creation, handling, and provision of pseudonymized information (仮名加工情報) and anonymized information (匿名加工情報). Defines processing standards, permissible uses, safety measures, and restrictions on re-identification. The 2020 amendment (effective April 2022) introduced pseudonymized information as a new data category enabling internal analysis without some APPI restrictions.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Pseudonymized information enables internal data analytics and AI training without full APPI consent requirements — but cannot be provided to third parties. Anonymized information can be shared externally but must meet rigorous de-identification standards. Understanding the distinction is critical for data utilization strategies.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL05">09</div>
+    <div class="entry-title">Guidelines on the APPI — Accredited Personal Information Protection Organizations</div>
+    <div class="entry-title-kr">同（認定個人情報保護団体編） · 인정개인정보보호단체편</div>
+    <div class="entry-meta"><span>最終改正: 令和7年12月</span><span>60KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/251212_nintei_dantai_guidelines.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — nintei_dantai_guidelines.pdf</a></div>
+    <div class="entry-desc">Outlines the accreditation standards, operational obligations, and complaint handling procedures for organizations accredited by PPC to promote personal information protection within their industry. Covers the establishment of personal information protection guidelines (自主ルール) and complaint mediation systems.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Industry associations seeking accreditation — or member companies of accredited organizations — must understand these requirements. Accredited organizations can establish sector-specific rules that are more stringent than the APPI, creating additional compliance obligations for their members.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="GL06">10</div>
+    <div class="entry-title">Guidelines on the APPI — Administrative Organs</div>
+    <div class="entry-title-kr">同（行政機関等編） · 행정기관등편</div>
+    <div class="entry-meta"><span>最終改正: 令和7年12月</span><span>187KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/files/pdf/251212_koutekibumon_guidelines.pdf" target="_blank" rel="noopener noreferrer">ppc.go.jp — koutekibumon_guidelines.pdf</a></div>
+    <div class="entry-desc">Comprehensive guidance for administrative organs, independent administrative agencies, and local governments on personal information handling under APPI Chapter 5. Covers unique public sector obligations including individual information files, information disclosure, restrictions on purpose-external use, and online linking with other administrative organs.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Mandatory reference for government agencies and their contractors handling personal data. Post-2022 unification, local governments that previously operated under ordinances must now comply with the unified APPI framework, making this guideline essential for transition compliance.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER III: Q&A ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 03</div>
+  <div class="chapter-title">Q&amp;A Documents</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="QA01">11</div>
+    <div class="entry-title">Guidelines Q&amp;A (Private Sector)</div>
+    <div class="entry-title-kr">ガイドラインに関するQ&amp;A · 가이드라인 Q&amp;A</div>
+    <div class="entry-meta"><span>最終改正: 令和7年7月</span><span>400+ items · 1.7MB PDF</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/faq/APPI_QA/" target="_blank" rel="noopener noreferrer">ppc.go.jp — APPI_QA</a></div>
+    <div class="entry-desc">Comprehensive Q&amp;A companion to the core guidelines (GL01–GL05). Over 400 practical questions and answers organized by topic, addressing specific scenarios not fully covered in the guidelines themselves. Updated regularly to address emerging compliance questions.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The most practical compliance reference after the guidelines themselves. When the guideline text does not clearly address a specific scenario, this Q&amp;A frequently provides the answer. Should be consulted alongside GL01 for any ambiguous compliance question.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="QA02">12</div>
+    <div class="entry-title">Q&amp;A for Administrative Organs</div>
+    <div class="entry-title-kr">行政機関等向けQ&amp;A · 행정기관등 Q&amp;A</div>
+    <div class="entry-meta"><span>最終改正: 令和7年12月</span><span>1.5MB PDF</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/#gyosei_Guide" target="_blank" rel="noopener noreferrer">ppc.go.jp — koutekibumon_qa</a></div>
+    <div class="entry-desc">Q&amp;A companion to GL06 (Administrative Organs). Addresses public-sector-specific questions including inter-agency data sharing, individual information file management, freedom of information intersections, and local government transition issues post-2022 unification.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Critical for public sector entities navigating the transition from former separate laws to the unified APPI framework. Addresses many practical questions arising from the integration of approximately 2,000 local government ordinances into a single national standard.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="QA03">13</div>
+    <div class="entry-title">Q&amp;A for Financial Institutions</div>
+    <div class="entry-title-kr">金融機関における個人情報保護に関するQ&amp;A · 금융기관 Q&amp;A</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/faq/kinyukikan_QA/" target="_blank" rel="noopener noreferrer">ppc.go.jp — kinyukikan_QA</a></div>
+    <div class="entry-desc">Sector-specific Q&amp;A for banks, securities firms, insurance companies, and other financial institutions. Addresses handling of financial transaction data, credit information, customer due diligence records, and financial institution-specific third-party provision scenarios.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Financial institutions face dual regulation under APPI and financial services laws. This Q&amp;A clarifies the interplay between privacy obligations and financial regulatory requirements, particularly for customer data sharing within financial groups.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="QA04">14</div>
+    <div class="entry-title">Q&amp;A for Medical and Long-Term Care Providers</div>
+    <div class="entry-title-kr">医療・介護関係事業者における個人情報Q&amp;A · 의료·개호 Q&amp;A</div>
+    <div class="entry-meta"><span>最終改正: 令和7年6月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/faq/iryoukaigo_guidance_QA/" target="_blank" rel="noopener noreferrer">ppc.go.jp — iryoukaigo_QA</a></div>
+    <div class="entry-desc">Q&amp;A addressing privacy compliance in healthcare settings — patient data handling, medical record access, information sharing among care teams, family notification, insurance claim processing, and special care-required personal information (medical history, disabilities).</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Medical data is classified as special care-required personal information under APPI, requiring explicit consent for acquisition. This Q&amp;A provides the practical guidance healthcare providers need for daily operations, including emergency situations where consent cannot be obtained.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="QA05">15</div>
+    <div class="entry-title">Q&amp;A for Health Insurance Associations</div>
+    <div class="entry-title-kr">健康保険組合における個人情報Q&amp;A · 건강보험조합 Q&amp;A</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/faq/kenpo_guidance_QA/" target="_blank" rel="noopener noreferrer">ppc.go.jp — kenpo_guidance_QA</a></div>
+    <div class="entry-desc">Q&amp;A for health insurance associations (健康保険組合) covering member health data handling, health checkup results, claims data analysis, data sharing with employers for occupational health, and data anonymization for epidemiological research.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Health insurance associations handle large volumes of sensitive medical data. This Q&amp;A clarifies the boundary between permissible use for insurance operations and prohibited secondary use, particularly when employers request access to employee health data.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER IV: FINANCIAL ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 04</div>
+  <div class="chapter-title">Financial Sector (金融関連)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="F01">16</div>
+    <div class="entry-title">Financial Sector Privacy Guidelines</div>
+    <div class="entry-title-kr">金融分野における個人情報保護に関するガイドライン · 금융분야 개인정보보호 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和6年3月</span><span>Joint: PPC + 金融庁 (FSA)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/kinyubunya_GL/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_financial</a></div>
+    <div class="entry-desc">Sector-specific overlay for financial institutions applying APPI requirements to banking, securities, insurance, and other financial services. Addresses heightened requirements for sensitive financial data, credit information, and data sharing within financial groups.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Financial institutions must comply with both the core APPI guidelines and this sector overlay. Key differences include stricter consent requirements for sensitive financial data, limitations on financial group data sharing, and enhanced safety management measures proportionate to the volume and sensitivity of financial data.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="F02">17</div>
+    <div class="entry-title">Financial Sector Safety Measures Implementation Guide</div>
+    <div class="entry-title-kr">金融分野における個人情報保護に関するガイドラインの安全管理措置等についての実務指針 · 금융분야 안전관리조치 실무지침</div>
+    <div class="entry-meta"><span>最終改正: 令和6年3月</span><span>Joint: PPC + 金融庁 (FSA)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/kinyubunya_GL/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_financial</a></div>
+    <div class="entry-desc">Technical implementation guide specifying concrete safety management measures for financial institutions. Covers organizational, personnel, physical, and technical safeguards including access control, encryption standards, log management, and incident response procedures specific to financial data.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Translates the broad safety management obligations in F01 into specific technical and organizational measures. Financial institution CISOs and compliance officers use this as the benchmark for implementing and auditing information security controls.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="F03">18</div>
+    <div class="entry-title">Credit Sector Privacy Guidelines</div>
+    <div class="entry-title-kr">信用分野における個人情報保護に関するガイドライン · 신용분야 개인정보보호 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和6年5月</span><span>Joint: PPC + METI</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/shinyou_GL/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_credit</a></div>
+    <div class="entry-desc">Guidelines for credit information businesses including credit bureaus and credit card companies. Addresses the handling of credit scores, payment history, default records, and the interplay between APPI obligations and the Installment Sales Act requirements.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Credit data has direct impact on individuals' economic lives. This guideline sets standards for accuracy, correction procedures, and retention periods for credit information, with particular attention to the rights of data subjects to dispute and correct inaccurate credit records.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="F04">19</div>
+    <div class="entry-title">Debt Collection Sector Privacy Guidelines</div>
+    <div class="entry-title-kr">債権管理回収業分野における個人情報保護に関するガイドライン · 채권관리회수업 개인정보보호 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和6年3月</span><span>Joint: PPC + MOJ</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/saikenkaisyu_GL/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_saiken</a></div>
+    <div class="entry-desc">Sector-specific guidelines for licensed debt servicers (サービサー) handling personal information in debt collection activities. Covers the intersection of privacy obligations with the Act on Special Measures Concerning Claim Management and Collection Business.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Debt collection involves handling highly sensitive financial distress data. This guideline establishes clear boundaries on data usage, prohibiting the use of collected personal information for purposes beyond debt recovery, and sets strict third-party provision rules for transferred debts.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER V: MEDICAL ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 05</div>
+  <div class="chapter-title">Medical &amp; Long-Term Care (医療関連)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="M01">20</div>
+    <div class="entry-title">Guidance for Medical and Long-Term Care Providers</div>
+    <div class="entry-title-kr">医療・介護関係事業者における個人情報の適切な取扱いのためのガイダンス · 의료·개호 사업자 가이던스</div>
+    <div class="entry-meta"><span>最終改正: 令和6年6月</span><span>Joint: PPC + 厚労省 (MHLW)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/iryoukaigo_guidance/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_medical</a></div>
+    <div class="entry-desc">Comprehensive guidance for hospitals, clinics, pharmacies, long-term care facilities, and other medical/care providers on handling patient and resident personal data. Covers consent in medical settings, third-party provision for referrals and joint care, handling of deceased patients' data, and information sharing within care teams.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Medical data is special care-required personal information under APPI. This guidance provides the practical framework for daily healthcare operations — from patient reception and medical record management to insurance claims and inter-institutional referrals — ensuring legal compliance without impeding patient care.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="M02">21</div>
+    <div class="entry-title">Guidance for Health Insurance Associations</div>
+    <div class="entry-title-kr">健康保険組合等における個人情報の適切な取扱いのためのガイダンス · 건강보험조합 가이던스</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>Joint: PPC + 厚労省 (MHLW)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/iryoukaigo_guidance/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_medical</a></div>
+    <div class="entry-desc">Guidance for health insurance associations (健保組合) on handling member personal data including health checkup results, claims data, and specific health guidance information. Addresses data collaboration between insurers and employers for workplace health management.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Health insurance associations must navigate the tension between effective health management and privacy protection. This guidance defines what health data can be shared with employers and under what conditions, a critical compliance question for occupational health programs.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="M03">22</div>
+    <div class="entry-title">Guidance for National Health Insurance Associations</div>
+    <div class="entry-title-kr">国民健康保険組合における個人情報の適切な取扱いのためのガイダンス · 국민건강보험조합 가이던스</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>Joint: PPC + 厚労省 (MHLW)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/iryoukaigo_guidance/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_medical</a></div>
+    <div class="entry-desc">Tailored guidance for national health insurance associations (国保組合) — typically organized by profession (doctors, dentists, pharmacists, construction workers, etc.). Covers member qualification verification, insurance premium calculation, and claims processing data handling specific to these associations.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">National health insurance associations have unique data handling characteristics due to their professional membership structure. This guidance addresses the specific scenarios where member personal data intersects with professional licensing and business information.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="M04">23</div>
+    <div class="entry-title">Guidance for National Health Insurance Federation</div>
+    <div class="entry-title-kr">国民健康保険団体連合会等における個人情報の適切な取扱いのためのガイダンス · 국민건강보험연합회 가이던스</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>Joint: PPC + 厚労省 (MHLW)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/iryoukaigo_guidance/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_medical</a></div>
+    <div class="entry-desc">Guidance for the National Health Insurance Federation (国保連合会) and similar umbrella organizations handling aggregated health insurance data from member associations. Covers claims review, statistical processing, and data provision to government agencies for health policy planning.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The Federation processes enormous volumes of health insurance claims data. This guidance establishes the framework for aggregation, statistical analysis, and anonymization of health data at scale, critical for both privacy protection and public health research utilization.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="M05">24</div>
+    <div class="entry-title">Guidelines for Genetic Information Businesses</div>
+    <div class="entry-title-kr">経済産業分野のうち個人遺伝情報を用いた事業分野における個人情報保護ガイドライン · 개인유전정보 사업 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和8年3月</span><span>Joint: PPC + METI</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/gentec_data_guideline/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_genetic</a></div>
+    <div class="entry-desc">Sector-specific guidelines for businesses utilizing personal genetic information, including direct-to-consumer genetic testing services, genome-based drug development, and genetic research. Addresses the unique privacy risks of genetic data — immutability, familial implications, and potential for discrimination.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Genetic data is permanently identifying and reveals information about biological relatives. This guideline establishes heightened safeguards for genetic testing companies, pharmaceutical firms, and research institutions, including restrictions on secondary use and strict anonymization requirements.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER VI: TELECOMMUNICATIONS ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 06</div>
+  <div class="chapter-title">Telecommunications (情報通信関連)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="T01">25</div>
+    <div class="entry-title">Telecommunications Business Privacy Guidelines</div>
+    <div class="entry-title-kr">電気通信事業における個人情報保護に関するガイドライン · 전기통신사업 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>PPC (transferred from MIC)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines/#comunication_gl" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_tsushin</a></div>
+    <div class="entry-desc">Comprehensive privacy guidelines for telecommunications carriers and ISPs. Covers secrecy of communications, location data handling, traffic data retention, lawful interception cooperation, and the unique privacy obligations arising from telecommunications infrastructure operation.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Telecommunications providers face constitutional-level obligations under Article 21 (secrecy of communications) in addition to APPI requirements. This guideline navigates the intersection, particularly regarding communication metadata, location tracking, and government data requests — critical for telecom operators and OTT service providers in Japan.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="T02">26</div>
+    <div class="entry-title">Broadcasting Recipients Privacy Guidelines</div>
+    <div class="entry-title-kr">放送受信者等の個人情報保護に関するガイドライン · 방송수신자 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>PPC (transferred from MIC)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines/#comunication_gl" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_tsushin</a></div>
+    <div class="entry-desc">Privacy guidelines for broadcasters handling viewer/listener personal data. Covers subscriber registration data, viewing history, interactive broadcasting participation data, and the balance between audience measurement and privacy protection.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">As broadcasting becomes increasingly interactive and personalized, viewer data processing expands significantly. This guideline establishes the framework for handling viewing behavior data, targeted advertising based on viewing patterns, and connected TV data collection.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="T03">27</div>
+    <div class="entry-title">Postal Service Privacy Guidelines</div>
+    <div class="entry-title-kr">郵便事業分野における個人情報保護に関するガイドライン · 우편사업 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>PPC (transferred from MIC)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines/#comunication_gl" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_tsushin</a></div>
+    <div class="entry-desc">Privacy guidelines for postal service operators covering sender/recipient data, delivery tracking information, and the protection of postal communications content. Addresses the unique obligations arising from the secrecy of correspondence.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Postal operators handle both communications content (letters) and logistics data (addresses, tracking). This guideline clarifies the different protection levels required for each category, particularly relevant for Japan Post and private delivery services operating postal functions.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="T04">28</div>
+    <div class="entry-title">Letter Delivery Service Privacy Guidelines</div>
+    <div class="entry-title-kr">信書便事業分野における個人情報保護に関するガイドライン · 신서편사업 가이드라인</div>
+    <div class="entry-meta"><span>最終改正: 令和7年10月</span><span>PPC (transferred from MIC)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/guidelines/#comunication_gl" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_tsushin</a></div>
+    <div class="entry-desc">Privacy guidelines for private letter delivery service operators (信書便事業者) handling personal correspondence. Covers the special obligations under the Act on Correspondence Delivery by Private Business Operators alongside APPI requirements.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Private letter delivery operators are subject to both APPI and correspondence delivery-specific privacy obligations. This guideline clarifies the dual regulatory framework, particularly for the handling, storage, and destruction of undeliverable correspondence containing personal information.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER VII: MY NUMBER ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 07</div>
+  <div class="chapter-title">My Number (マイナンバー)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="MN01">29</div>
+    <div class="entry-title">Specific Personal Information Guidelines — Business Operators</div>
+    <div class="entry-title-kr">特定個人情報の適正な取扱いに関するガイドライン（事業者編） · 특정개인정보 가이드라인 (사업자편)</div>
+    <div class="entry-meta"><span>最終改正: 令和7年6月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/legal/policy/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_mynumber</a></div>
+    <div class="entry-desc">Guidelines for private business operators handling My Number (individual identification numbers) and specific personal information. Covers the strict use-limitation (tax, social security, disaster response only), acquisition procedures, safety management measures, and destruction requirements.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Every employer in Japan must collect and manage employees' My Numbers. This guideline is mandatory reading for HR and payroll departments. Key requirements include: purpose-limited use, physical/technical/organizational safety measures, prompt destruction after retention period, and absolute prohibition of purpose-external use even with consent.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="MN02">30</div>
+    <div class="entry-title">Specific Personal Information Guidelines — Financial Business Annex</div>
+    <div class="entry-title-kr">同（別冊）金融業務における特定個人情報の適正な取扱いに関するガイドライン · 금융업무 별책</div>
+    <div class="entry-meta"><span>最終改正: 令和7年4月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/legal/policy/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_mynumber</a></div>
+    <div class="entry-desc">Supplementary guidelines addressing My Number handling specific to financial institutions. Covers the collection and management of customer My Numbers for tax reporting (withholding tax statements, payment records), the distinction between customer-facing and back-office processing, and the interplay with financial sector privacy guidelines.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Financial institutions collect My Numbers from customers for legal reporting obligations. This annex provides implementation guidance for segregating My Number data from general customer data, access control requirements, and the strict prohibition on using My Numbers for customer identification or marketing purposes.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="MN03">31</div>
+    <div class="entry-title">Specific Personal Information Guidelines — Administrative Organs</div>
+    <div class="entry-title-kr">特定個人情報の適正な取扱いに関するガイドライン（行政機関等編） · 특정개인정보 가이드라인 (행정기관편)</div>
+    <div class="entry-meta"><span>最終改正: 令和7年6月</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/legal/policy/" target="_blank" rel="noopener noreferrer">ppc.go.jp — guidelines_mynumber</a></div>
+    <div class="entry-desc">Guidelines for administrative organs handling My Number in tax administration, social security, and disaster response operations. Covers inter-agency information linkage, specific personal information files, and the PIA (Personal Information Impact Assessment) requirements unique to the public sector.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Government agencies are the primary users of the My Number system for inter-agency information linkage. This guideline establishes the framework for conducting mandatory PIAs before creating new specific personal information files, a requirement that does not exist in the private sector.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER VIII: OTHER DOCUMENTS ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 08</div>
+  <div class="chapter-title">Other Documents</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="O01">32</div>
+    <div class="entry-title">Basic Policy on the Protection of Personal Information</div>
+    <div class="entry-title-kr">個人情報の保護に関する基本方針 · 개인정보보호 기본방침 (각의결정)</div>
+    <div class="entry-meta"><span>閣議決定 (Cabinet Decision)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/fundamental_policy/" target="_blank" rel="noopener noreferrer">ppc.go.jp — kihonhoushin</a></div>
+    <div class="entry-desc">Cabinet-level basic policy establishing the Japanese government's strategic direction for personal information protection. Sets forth the overall framework, roles of relevant ministries, international cooperation policy, and the approach to balancing data utilization with privacy protection.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">While not directly creating compliance obligations, this Cabinet decision shapes the direction of future regulatory amendments and enforcement priorities. Useful for understanding the policy rationale behind APPI provisions and anticipating future regulatory developments.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="O02">33</div>
+    <div class="entry-title">Employment Management — Health Information Handling Considerations</div>
+    <div class="entry-title-kr">雇用管理分野における個人情報のうち健康情報を取り扱うに当たっての留意事項 · 고용관리 건강정보 유의사항</div>
+    <div class="entry-meta"><span>Joint: PPC + 厚労省 (MHLW)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/" target="_blank" rel="noopener noreferrer">ppc.go.jp — legal</a></div>
+    <div class="entry-desc">Guidelines on handling employee health information in the employment context. Covers health checkup results, stress check data, return-to-work certifications, and the boundary between what employers may access and what must be restricted to occupational health professionals.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Employers must manage employee health data under both APPI and the Industrial Safety and Health Act. This document clarifies the minimum necessary principle — only occupational health staff should access detailed medical results, while employers receive only work fitness determinations.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="O03">34</div>
+    <div class="entry-title">Supplementary Rules for EU/UK Adequacy Transfers</div>
+    <div class="entry-title-kr">個人情報の保護に関する法律に係るEU及び英国域内から十分性認定により移転を受けた個人データの取扱いに関する補完的ルール · EU·영국 적정성 인정 보완적 규칙</div>
+    <div class="entry-meta"><span>PPC Decision</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/enforcement/cooperation/cooperation/sougoninshou" target="_blank" rel="noopener noreferrer">ppc.go.jp — adequacy</a></div>
+    <div class="entry-desc">Supplementary rules that apply specifically to personal data transferred from the EU/EEA and UK to Japan under the mutual adequacy decisions. Provides enhanced protections beyond standard APPI requirements, including treating all EU-origin data as special care-required personal information and restricting onward transfer to countries without adequacy.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Any organization receiving personal data from the EU/UK under the adequacy framework must apply these supplementary rules in addition to the standard APPI requirements. Key obligations include: treating all EU-origin data at the highest sensitivity level, limiting onward cross-border transfers, and responding to data subject access requests within the GDPR-aligned timeframes.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="O04">35</div>
+    <div class="entry-title">Expert Committee Report on Camera Image Use for Crime Prevention and Safety</div>
+    <div class="entry-title-kr">犯罪予防や安全確保のためのカメラ画像利用に関する有識者検討会報告書 · 얼굴식별 카메라 시스템 보고서</div>
+    <div class="entry-meta"><span>PPC Expert Committee</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/" target="_blank" rel="noopener noreferrer">ppc.go.jp — legal</a></div>
+    <div class="entry-desc">Expert committee report examining the use of facial recognition camera systems for crime prevention and public safety. Analyzes the privacy implications of facial recognition technology, proposes governance principles, and recommends safeguards including purpose limitation, accuracy requirements, and transparency measures.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">While not legally binding, this report represents the PPC's authoritative position on facial recognition technology. Organizations deploying facial recognition for security purposes should treat these recommendations as de facto compliance standards, particularly regarding notice, purpose limitation, and data retention for camera footage with facial recognition capabilities.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="O05">36</div>
+    <div class="entry-title">Administrative Organs — Operational Response Guide</div>
+    <div class="entry-title-kr">行政機関等向け事務対応ガイド · 행정기관 사무대응 가이드</div>
+    <div class="entry-meta"><span>PPC</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/personalinfo/legal/" target="_blank" rel="noopener noreferrer">ppc.go.jp — legal</a></div>
+    <div class="entry-desc">Practical operational guide for government officials handling personal data in daily administrative work. Provides step-by-step procedures for common tasks: responding to disclosure requests, managing individual information files, handling data breaches, and coordinating with PPC on reporting obligations.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Designed as a desktop reference for government officials. Simplifies the complex requirements of GL06 and the Administrative Organs Q&amp;A into actionable procedures. Particularly valuable for local government staff transitioning from former ordinance-based frameworks to the unified APPI system.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═══════════════ PART B: AI GOVERNANCE ═══════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<div style="height: 2px; background: #222222; margin: 48px 0 0 0;"></div>
+<div style="padding: 20px 0 8px 0; text-align: center; font-size: 11px; font-weight: 600; color: #2d6a4f; letter-spacing: 4px; text-transform: uppercase; page-break-before: always;">Part B — Artificial Intelligence Governance</div>
+
+<!-- ═══════════════ CHAPTER IX: AI LAW & STRATEGY ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-label">Chapter 09</div>
+  <div class="chapter-title">AI Law &amp; National Strategy (AI法令・国家戦略)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI01">37</div>
+    <div class="entry-title">Act on Promotion of Research, Development and Utilization of AI-Related Technologies</div>
+    <div class="entry-title-kr">人工知能関連技術の研究開発及び活用の推進に関する法律 · AI추진법 (令和7年法律第53号)</div>
+    <div class="entry-meta"><span>National Diet</span><span>Enacted May 28, 2025</span><span>Full effect Sep 1, 2025</span><span>28 articles, 4 chapters</span></div>
+    <div class="entry-link"><a href="https://laws.e-gov.go.jp/law/507AC0000000053" target="_blank" rel="noopener noreferrer">laws.e-gov.go.jp — 507AC0000000053</a></div>
+    <div class="entry-desc">Japan's first comprehensive AI law. A framework statute establishing basic principles for AI development and utilization: respect for human rights, safety, fairness, transparency, protection of privacy, and security. Creates the AI Strategy Headquarters (人工知能戦略本部) under the Prime Minister and mandates the AI Basic Plan. Defines responsibilities of the state, local governments, R&amp;D institutions, businesses, and citizens.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Innovation-first approach with no penalties — a deliberate contrast to the EU AI Act's risk-based enforcement model. The law provides the legal basis for all subsequent AI guidelines and plans. The AI Strategy Headquarters (headed by the Prime Minister, all cabinet ministers as members) coordinates cross-ministerial AI policy. Organizations operating in Japan should monitor implementing measures as the framework matures.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI02">38</div>
+    <div class="entry-title">AI Basic Plan — "Japan's Revival through Trustworthy AI"</div>
+    <div class="entry-title-kr">人工知能基本計画 — 「信頼できるAIによる日本再起」 · AI기본계획</div>
+    <div class="entry-meta"><span>Cabinet Decision (閣議決定)</span><span>December 23, 2025</span><span>41KB markdown</span></div>
+    <div class="entry-link"><a href="https://www8.cao.go.jp/cstp/ai/ai_plan/aiplan_20251223.pdf" target="_blank" rel="noopener noreferrer">cao.go.jp — AI Basic Plan PDF</a></div>
+    <div class="entry-desc">First national AI plan under the AI Promotion Act. Sets the vision of making Japan "the most AI-friendly country in the world." Four-chapter structure: basic vision, three principles (人間中心 human-centric, 安全・安心 safety/security, 公正・透明 fairness/transparency) and four basic policies, specific government measures across all policy areas, and implementation/follow-up provisions.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The national-level strategic document that drives budget allocation, institutional design, and policy priorities for AI in Japan. Unlike sector-specific guidelines, this plan represents the government's unified vision. Critical for understanding the direction of forthcoming regulations, investment incentives, and public-private partnership initiatives.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER X: CROSS-MINISTERIAL AI GL ═══════════════ -->
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Chapter 10</div>
+  <div class="chapter-title">Cross-Ministerial AI Guidelines (省庁横断)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI03">39</div>
+    <div class="entry-title">AI Business Operator Guidelines v1.1</div>
+    <div class="entry-title-kr">AI事業者ガイドライン v1.1 · AI사업자 가이드라인</div>
+    <div class="entry-meta"><span>METI + MIC (Joint)</span><span>March 28, 2025</span><span>39 pages, 5 parts</span></div>
+    <div class="entry-link"><a href="https://www.soumu.go.jp/main_content/001002576.pdf" target="_blank" rel="noopener noreferrer">soumu.go.jp — AI Business Operator GL v1.1 PDF</a></div>
+    <div class="entry-desc">The central operational guideline for AI governance in Japan. Unifies four predecessor documents (AI Development GL 2017, AI Utilization GL 2018, Human-Centric AI Principles 2019, AI Governance GL 2022) into a single framework. Defines roles for AI Developers, Providers, and Users (business operators). Establishes 10 common principles: human-centricity, safety, fairness, privacy protection, security, transparency, accountability, education/literacy, fair competition, and innovation. Incorporates the Hiroshima Process guiding principles for advanced AI systems.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The single most important AI compliance reference for businesses operating in Japan. While not legally binding, it represents the consensus position of Japan's two primary technology ministries. Part 3 (Developer obligations), Part 4 (Provider obligations), and Part 5 (User obligations) provide role-specific guidance. The Agile Governance framework (Section E) recommends iterative risk assessment cycles rather than static compliance checklists — a distinctive feature of Japan's regulatory approach.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI04">40</div>
+    <div class="entry-title">PPC Alert on Use of Generative AI Services</div>
+    <div class="entry-title-kr">生成AIサービスの利用に関する注意喚起 · 생성AI 서비스 이용 주의환기</div>
+    <div class="entry-meta"><span>PPC (個人情報保護委員会)</span><span>June 2, 2023 (updated)</span></div>
+    <div class="entry-link"><a href="https://www.ppc.go.jp/news/careful_information/230602_AI_utilize_alert/" target="_blank" rel="noopener noreferrer">ppc.go.jp — Generative AI Alert</a></div>
+    <div class="entry-desc">Official PPC alert addressing both users and providers of generative AI services. Warns against inputting sensitive personal information into AI services, reminds providers of APPI obligations for machine learning data collection, and addresses purpose limitation for AI-processed personal data. Specifically named OpenAI in initial guidance.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The critical nexus between privacy and AI regulation. Establishes that existing APPI obligations — consent, purpose limitation, safety measures, breach reporting — apply fully to generative AI use cases. Organizations deploying generative AI must treat this alert as binding PPC interpretation. Particularly relevant for enterprises allowing employees to use ChatGPT or similar services with business data.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI05">41</div>
+    <div class="entry-title">AI Contract Checklist — Contracts for AI Development &amp; Utilization</div>
+    <div class="entry-title-kr">AIの利用・開発に関する契約チェックリスト · AI 계약 체크리스트</div>
+    <div class="entry-meta"><span>METI (経済産業省)</span><span>February 18, 2025</span></div>
+    <div class="entry-link"><a href="https://www.meti.go.jp/press/2024/02/20250218003/20250218003.html" target="_blank" rel="noopener noreferrer">meti.go.jp — AI Contract Checklist</a></div>
+    <div class="entry-desc">Practical checklist for drafting and reviewing contracts involving AI development and utilization. Covers key contractual issues including data rights, IP ownership of AI-generated outputs, liability allocation, performance warranties, data security obligations, and compliance with AI Business Operator Guidelines.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Essential for legal teams negotiating AI vendor agreements or AI development contracts. Complements the AI Business Operator Guidelines by translating governance principles into concrete contractual provisions. Addresses the uniquely challenging question of IP rights for AI-generated works — a topic where Japan's approach diverges from other jurisdictions.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER XI: DIGITAL AGENCY ═══════════════ -->
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Chapter 11</div>
+  <div class="chapter-title">Digital Agency AI Guidelines (デジタル庁)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI06">42</div>
+    <div class="entry-title">Guideline for Governments' Procurement &amp; Utilization of Generative AI (DS-920)</div>
+    <div class="entry-title-kr">行政の進化と革新のための生成AIの調達・利活用に係るガイドライン · 행정 생성AI 조달·이활용 가이드라인</div>
+    <div class="entry-meta"><span>Digital Agency + METI + MIC</span><span>May 27, 2025</span><span>Full application from FY2026</span></div>
+    <div class="entry-link"><a href="https://www.digital.go.jp/en/news/3579c42d-b11c-4756-b66e-3d3e35175623" target="_blank" rel="noopener noreferrer">digital.go.jp — DS-920 Announcement</a></div>
+    <div class="entry-desc">Comprehensive guideline governing how Japanese government agencies procure and utilize generative AI. Mandates appointment of Chief AI Officers (CAIO) in each ministry, establishes an AI governance framework for public administration, defines risk-case response rules, and sets procurement evaluation criteria for generative AI services.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Directly impacts AI vendors selling to the Japanese government. The CAIO mandate and governance framework requirements will become de facto standards for private sector AI governance as well. Full application from FY2026 (令和8年度) means compliance infrastructure must be built throughout FY2025. AI service providers targeting government contracts must meet the procurement evaluation criteria specified in this guideline.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI07">43</div>
+    <div class="entry-title">Text-Generating AI Risk Countermeasure Guidebook</div>
+    <div class="entry-title-kr">テキスト生成AIリスク対策ガイドブック · 텍스트 생성AI 리스크 대책 가이드북</div>
+    <div class="entry-meta"><span>Digital Agency (デジタル庁)</span><span>Alpha version</span></div>
+    <div class="entry-link"><a href="https://www.digital.go.jp/resources/generalitve-ai-guidebook" target="_blank" rel="noopener noreferrer">digital.go.jp — Gen AI Risk Guidebook</a></div>
+    <div class="entry-desc">Practical risk management guidebook focused on text-generating AI systems. Catalogs risks including hallucination, bias, privacy violations, confidential information leakage, and copyright infringement. Provides countermeasures organized by risk category with implementation guidance for government officials and contractors.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Although labeled "alpha version," this guidebook provides the most granular risk-by-risk analysis of text-generating AI available from any Japanese government source. Useful as a risk assessment framework even for private sector organizations. The hallucination and confidentiality risks sections are particularly well-developed and actionable.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER XII: INTERNATIONAL & AI SAFETY ═══════════════ -->
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Chapter 12</div>
+  <div class="chapter-title">International (国際)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI08">44</div>
+    <div class="entry-title">Hiroshima AI Process — International Code of Conduct for Advanced AI</div>
+    <div class="entry-title-kr">広島AIプロセス — 高度なAIシステムを開発する組織向けの国際行動規範 · 히로시마 AI 프로세스</div>
+    <div class="entry-meta"><span>G7 (Japan Presidency)</span><span>October 30, 2023</span><span>59 participating countries/regions</span></div>
+    <div class="entry-link"><a href="https://www.soumu.go.jp/hiroshimaaiprocess/" target="_blank" rel="noopener noreferrer">soumu.go.jp — Hiroshima AI Process</a></div>
+    <div class="entry-desc">G7-led initiative establishing 11 guiding principles and an international code of conduct for organizations developing advanced AI systems. Covers pre-deployment safety testing, transparency, content authentication (watermarking), responsible information sharing, and investment in AI safety research. The "Hiroshima AI Process Friends Group" has expanded to 59 countries/regions as of November 2025, with a reporting framework operational from February 2025.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Represents Japan's signature contribution to international AI governance. While voluntary, the code of conduct is increasingly referenced in national regulations worldwide. Companies developing frontier AI models should expect compliance inquiries based on these principles. The reporting framework creates a structured accountability mechanism for advanced AI developers. Incorporated directly into Japan's AI Business Operator Guidelines v1.1 (Part D).</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ CHAPTER XIII: SECTOR-SPECIFIC AI ═══════════════ -->
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Chapter 13</div>
+  <div class="chapter-title">Sector-Specific AI Governance (業種別AI)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI10">45</div>
+    <div class="entry-title">FSA AI Discussion Paper — Promoting Sound AI Use in Financial Institutions</div>
+    <div class="entry-title-kr">AIディスカッションペーパー — 金融機関等におけるAIの活用実態と健全な利活用の促進に向けた初期的な論点整理 · 금융청 AI 논의자료</div>
+    <div class="entry-meta"><span>FSA (金融庁)</span><span>March 4, 2025</span><span>Discussion Paper</span></div>
+    <div class="entry-link"><a href="https://www.fsa.go.jp/news/r6/sonota/20250304/aidp.html" target="_blank" rel="noopener noreferrer">fsa.go.jp — AI Discussion Paper</a></div>
+    <div class="entry-desc">Discussion paper examining current AI utilization patterns in Japanese financial institutions and identifying issues for promoting sound AI use. Covers model risk management for AI, explainability requirements for AI-driven lending and insurance decisions, customer data protection in AI processing, and governance structures for financial AI deployment.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Signals FSA's regulatory direction for AI in finance. While currently a discussion paper (not binding guidance), the issues identified will likely evolve into supervisory expectations. Financial institutions should treat these as early compliance indicators. The FSA AI Public-Private Forum (established June 2025) is actively developing implementation frameworks.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI11">46</div>
+    <div class="entry-title">Guidelines on Medical Digital Data Utilization for AI R&amp;D</div>
+    <div class="entry-title-kr">医療デジタルデータのAI研究開発等への利活用に係るガイドライン · 의료 디지털 데이터 AI 연구개발 이활용 가이드라인</div>
+    <div class="entry-meta"><span>MHLW (厚生労働省)</span><span>46KB markdown</span></div>
+    <div class="entry-link"><a href="https://www.mhlw.go.jp/content/001310044.pdf" target="_blank" rel="noopener noreferrer">mhlw.go.jp — Medical Data AI GL PDF</a></div>
+    <div class="entry-desc">Guideline governing the use of medical digital data (electronic health records, diagnostic imaging, genomic data) for AI research and development. Addresses data quality requirements, anonymization/pseudonymization standards for medical AI training data, institutional review board (IRB) requirements, and patient consent frameworks.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Critical for healthtech and medtech companies developing AI diagnostic tools, drug discovery AI, or clinical decision support systems for the Japanese market. Bridges the gap between APPI privacy requirements and sector-specific medical data handling rules. PMDA (Japan's FDA equivalent) evaluates AI-based medical devices against these standards.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI12">47</div>
+    <div class="entry-title">Generative AI in Elementary &amp; Secondary Education — Guidelines v2.0</div>
+    <div class="entry-title-kr">初等中等教育段階における生成AIの利活用に関するガイドライン v2.0 · 초중등교육 생성AI 이활용 가이드라인</div>
+    <div class="entry-meta"><span>MEXT (文部科学省)</span><span>December 26, 2024</span></div>
+    <div class="entry-link"><a href="https://www.mext.go.jp/content/20241226-mxt_shuukyo02-000030823_001.pdf" target="_blank" rel="noopener noreferrer">mext.go.jp — Gen AI Education GL v2.0</a></div>
+    <div class="entry-desc">Guidelines for the use of generative AI in elementary and secondary education. Covers permissible and prohibited use cases, teacher training requirements, student data protection, academic integrity considerations, and age-appropriate AI literacy education. Version 2.0 significantly expands the provisional v1.0 (July 2023) based on pilot program feedback.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Sets the framework for EdTech companies deploying generative AI tools in Japanese schools. Student data protection requirements are stricter than general APPI obligations. Schools and local education boards use these guidelines as the compliance baseline. The guidelines' position on AI-assisted homework and examinations creates market opportunities and constraints for education platforms.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI13">48</div>
+    <div class="entry-title">MOD AI Utilization Promotion Basic Policy</div>
+    <div class="entry-title-kr">防衛省AI活用推進基本方針 · 방위성 AI 활용 추진 기본방침</div>
+    <div class="entry-meta"><span>Ministry of Defense (防衛省)</span><span>July 2, 2024</span></div>
+    <div class="entry-link"><a href="https://www.mod.go.jp/j/press/news/2024/07/02a_03.pdf" target="_blank" rel="noopener noreferrer">mod.go.jp — MOD AI Basic Policy PDF</a></div>
+    <div class="entry-desc">Basic policy on promoting AI utilization across Japan's defense and security operations. Covers intelligence analysis, logistics optimization, cybersecurity, and decision support applications. Establishes governance principles for military AI including human oversight, operational testing requirements, and risk management frameworks.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Defines the defense sector's AI adoption roadmap. Defense contractors and dual-use technology providers must align with these policies for government procurement eligibility. The human oversight requirements are particularly stringent for autonomous systems. Read in conjunction with the ATLA Responsible AI Guidelines (entry 50) for complete defense AI compliance picture.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI14">49</div>
+    <div class="entry-title">Responsible AI Application Guidelines for Defense Equipment R&amp;D</div>
+    <div class="entry-title-kr">装備品等の研究開発における責任あるAI適用ガイドライン · 방위장비청 책임있는 AI 적용 가이드라인</div>
+    <div class="entry-meta"><span>ATLA (防衛装備庁)</span><span>June 6, 2025 (v1)</span></div>
+    <div class="entry-link"><a href="https://www.mod.go.jp/atla/soubiseisaku/ai_guideline/ai_guideline_ver.01.pdf" target="_blank" rel="noopener noreferrer">mod.go.jp/atla — Responsible AI GL</a></div>
+    <div class="entry-desc">Guidelines for responsible application of AI in research and development of defense equipment. Addresses international humanitarian law compliance, human oversight requirements for AI-enabled weapons systems, bias prevention in targeting and threat assessment algorithms, transparency and explainability standards, and Japan's policy position on lethal autonomous weapons systems (LAWS).</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">The most detailed Japanese government document on ethical AI in military applications. Sets binding requirements for defense contractors developing AI-enabled systems. Japan's position on LAWS (maintaining meaningful human control) aligns with but is more detailed than the general international discourse. Companies in the defense supply chain must demonstrate compliance with these guidelines throughout the R&amp;D lifecycle.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI15">50</div>
+    <div class="entry-title">Local Government AI Utilization &amp; Introduction Guidebook</div>
+    <div class="entry-title-kr">自治体におけるAI活用・導入ガイドブック · 자치체 AI 활용·도입 가이드북</div>
+    <div class="entry-meta"><span>MIC (総務省)</span><span>4th edition</span></div>
+    <div class="entry-link"><a href="https://www.soumu.go.jp/menu_news/s-news/01gyosei04_02000155.html" target="_blank" rel="noopener noreferrer">soumu.go.jp — Local Gov AI Guidebook</a></div>
+    <div class="entry-desc">Guidebook for Japanese local governments (municipalities, prefectures) on introducing and utilizing AI in administrative operations. Provides step-by-step implementation procedures, use case examples (citizen inquiry chatbots, document processing, infrastructure inspection), procurement guidelines, and risk management frameworks tailored for local government contexts.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Key reference for GovTech and civic tech vendors targeting Japan's 1,700+ local governments. The guidebook's procurement framework and evaluation criteria shape RFP requirements for AI solutions. Local governments increasingly use this guidebook as the compliance baseline when evaluating AI vendor proposals. Now in its 4th edition, reflecting accumulated deployment experience.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ CHAPTER XIV: AI & IP ═══════════════ -->
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Chapter 14</div>
+  <div class="chapter-title">AI &amp; Intellectual Property (知的財産)</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry">
+    <div class="entry-num" id="AI16">51</div>
+    <div class="entry-title">AI and Copyright — Perspectives, Checklist &amp; Guidance</div>
+    <div class="entry-title-kr">AIと著作権に関する考え方について / チェックリスト＆ガイダンス · AI와 저작권</div>
+    <div class="entry-meta"><span>Agency for Cultural Affairs (文化庁)</span><span>Perspectives: March 15, 2024</span></div>
+    <div class="entry-link"><a href="https://www.bunka.go.jp/seisaku/chosakuken/aiandcopyright.html" target="_blank" rel="noopener noreferrer">bunka.go.jp — AI and Copyright</a></div>
+    <div class="entry-desc">Comprehensive analysis of copyright issues arising from AI development and use under Japan's Copyright Act. Examines Article 30-4 (non-enjoyment purpose use exemption for machine learning), scope of permissible training data use, copyright status of AI-generated outputs, and liability for AI-generated content that infringes existing copyrights. The accompanying checklist provides decision-tree guidance for common scenarios.</div>
+    <div class="entry-impl">
+      <div class="entry-impl-label">Practical Significance</div>
+      <div class="entry-impl-text">Japan's Copyright Act Article 30-4 provides one of the world's most permissive frameworks for using copyrighted works as AI training data (for "non-enjoyment purposes"). However, this document clarifies important limitations — particularly when AI output is substantially similar to training data or when the training purpose is not genuinely analytical. Essential reading for any organization training AI models on Japanese-language content or deploying generative AI that may produce content similar to existing copyrighted works.</div>
+    </div>
+    <div class="entry-sep"></div>
+  </div>
+</div>
+
+<!-- ═══════════════ STRUCTURAL ANALYSIS ═══════════════ -->
+<div style="height: 2px; background: #222222; margin: 48px 0 0 0;"></div>
+<div class="chapter" style="page-break-before: always;">
+  <div class="chapter-label">Appendix</div>
+  <div class="chapter-title">Regulatory Hierarchy &amp; Structural Analysis</div>
+  <div class="chapter-bar"></div>
+
+  <div class="entry-desc" style="margin-bottom: 20px;">Japan's data protection and AI governance regulatory framework:</div>
+
+  <div class="hierarchy">
+    <!-- APPI -->
+    <div class="h-root">Act on the Protection of Personal Information<span class="h-root-sub">個人情報保護法 · Act No. 57 of 2003</span></div>
+
+    <div class="h-tier1" style="margin-bottom: 12px;">
+      <div class="h-block" style="flex: 1 1 100%; border-top-color: #222222;">
+        <div class="h-block-title" style="color: #222222;">Subordinate Legislation</div>
+        <div class="h-block-item"><span class="h-code">L02</span> Enforcement Order (政令第507号)</div>
+        <div class="h-block-item"><span class="h-code">L03</span> Enforcement Rules (委員会規則第3号)</div>
+        <div class="h-block-item"><span class="h-code">O01</span> Basic Policy (閣議決定)</div>
+      </div>
+    </div>
+
+    <div class="h-tier1">
+      <div class="h-block">
+        <div class="h-block-title">Private Sector</div>
+        <div class="h-block-item"><span class="h-code">GL01</span> General Rules <span class="h-star">★</span></div>
+        <div class="h-block-item"><span class="h-code">GL02</span> Cross-Border Transfer</div>
+        <div class="h-block-item"><span class="h-code">GL03</span> Third-Party Records</div>
+        <div class="h-block-item"><span class="h-code">GL04</span> Pseudonymized / Anonymized</div>
+        <div class="h-block-item"><span class="h-code">GL05</span> Accredited Organizations</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">Reference</div>
+          <div class="h-block-item"><span class="h-code">QA01</span> Guidelines Q&amp;A (400+ items)</div>
+        </div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Public Sector</div>
+        <div class="h-block-item"><span class="h-code">GL06</span> Administrative Organs</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">Reference</div>
+          <div class="h-block-item"><span class="h-code">QA02</span> Administrative Organs Q&amp;A</div>
+          <div class="h-block-item"><span class="h-code">O05</span> Operational Response Guide</div>
+        </div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">EU / UK Adequacy</div>
+        <div class="h-block-item"><span class="h-code">O03</span> Supplementary Rules</div>
+      </div>
+    </div>
+
+    <div class="h-tier1" style="margin-top: 16px;">
+      <div class="h-block">
+        <div class="h-block-title">Finance</div>
+        <div class="h-block-item"><span class="h-code">F01</span> Financial Sector GL</div>
+        <div class="h-block-item"><span class="h-code">F02</span> Safety Measures Guide</div>
+        <div class="h-block-item"><span class="h-code">F03</span> Credit Sector GL</div>
+        <div class="h-block-item"><span class="h-code">F04</span> Debt Collection GL</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">Joint with FSA, METI, MOJ</div>
+        </div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Medical &amp; Long-Term Care</div>
+        <div class="h-block-item"><span class="h-code">M01</span> Medical Providers</div>
+        <div class="h-block-item"><span class="h-code">M02</span> Health Insurance Assoc.</div>
+        <div class="h-block-item"><span class="h-code">M03</span> National Health Insurance</div>
+        <div class="h-block-item"><span class="h-code">M04</span> NHI Federation</div>
+        <div class="h-block-item"><span class="h-code">M05</span> Genetic Information</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">Joint with MHLW, METI</div>
+        </div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Telecommunications</div>
+        <div class="h-block-item"><span class="h-code">T01</span> Telecom Business</div>
+        <div class="h-block-item"><span class="h-code">T02</span> Broadcasting</div>
+        <div class="h-block-item"><span class="h-code">T03</span> Postal Service</div>
+        <div class="h-block-item"><span class="h-code">T04</span> Letter Delivery</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">Transferred from MIC</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- My Number Act -->
+    <div class="h-root" style="margin-top: 28px;">Act on the Use of Numbers to Identify a Specific Individual<span class="h-root-sub">マイナンバー法 · Act No. 27 of 2013</span></div>
+
+    <div class="h-tier1">
+      <div class="h-block">
+        <div class="h-block-title">My Number Guidelines</div>
+        <div class="h-block-item"><span class="h-code">MN01</span> Business Operators</div>
+        <div class="h-block-item"><span class="h-code">MN02</span> Financial Business Annex</div>
+        <div class="h-block-item"><span class="h-code">MN03</span> Administrative Organs</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AI GOVERNANCE HIERARCHY -->
+  <div class="hierarchy" style="margin-top: 40px;">
+    <div class="h-root">Act on Promotion of AI-Related Technologies<span class="h-root-sub">AI推進法 · Act No. 53 of 2025</span></div>
+
+    <div class="h-tier1" style="margin-bottom: 12px;">
+      <div class="h-block" style="flex: 1 1 100%; border-top-color: #222222;">
+        <div class="h-block-title" style="color: #222222;">National Strategy</div>
+        <div class="h-block-item"><span class="h-code">AI02</span> AI Basic Plan (閣議決定, Dec 2025)</div>
+        <div class="h-block-item"><span class="h-code"></span> AI Strategy Headquarters (人工知能戦略本部)</div>
+        <div class="h-block-item"><span class="h-code"></span> AI Safety Institute (AISI, IPA)</div>
+      </div>
+    </div>
+
+    <div class="h-tier1">
+      <div class="h-block">
+        <div class="h-block-title">Cross-Ministerial</div>
+        <div class="h-block-item"><span class="h-code">AI03</span> AI Business Operator GL v1.1 <span class="h-star">★</span></div>
+        <div class="h-block-item"><span class="h-code">AI04</span> PPC Generative AI Alert</div>
+        <div class="h-block-item"><span class="h-code">AI05</span> AI Contract Checklist</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">METI + MIC Joint</div>
+        </div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Digital Agency</div>
+        <div class="h-block-item"><span class="h-code">AI06</span> Gen AI Procurement GL (DS-920)</div>
+        <div class="h-block-item"><span class="h-code">AI07</span> Text Gen AI Risk Guidebook</div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">International</div>
+        <div class="h-block-item"><span class="h-code">AI08</span> Hiroshima AI Process</div>
+        <div class="h-subordinate">
+          <div class="h-subordinate-label">G7 · 59 countries</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="h-tier1" style="margin-top: 16px;">
+      <div class="h-block">
+        <div class="h-block-title">Finance (金融庁)</div>
+        <div class="h-block-item"><span class="h-code">AI10</span> AI Discussion Paper</div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Medical (厚労省)</div>
+        <div class="h-block-item"><span class="h-code">AI11</span> Medical Data AI GL</div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Education (文科省)</div>
+        <div class="h-block-item"><span class="h-code">AI12</span> Gen AI Education GL v2.0</div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Defense (防衛省)</div>
+        <div class="h-block-item"><span class="h-code">AI13</span> MOD AI Basic Policy</div>
+        <div class="h-block-item"><span class="h-code">AI14</span> ATLA Responsible AI GL</div>
+      </div>
+    </div>
+
+    <div class="h-tier1" style="margin-top: 16px;">
+      <div class="h-block">
+        <div class="h-block-title">Local Government (総務省)</div>
+        <div class="h-block-item"><span class="h-code">AI15</span> Local Gov AI Guidebook</div>
+      </div>
+
+      <div class="h-block">
+        <div class="h-block-title">Copyright (文化庁)</div>
+        <div class="h-block-item"><span class="h-code">AI16</span> AI &amp; Copyright Perspectives</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
